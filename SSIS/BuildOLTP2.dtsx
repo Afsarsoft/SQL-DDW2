@@ -5,74 +5,74 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SCYRUSH1"
   DTS:CreatorName="REDMOND\scyrus"
-  DTS:DTSID="{6AF498B7-8C8F-4562-827B-F76BDDA2C502}"
+  DTS:DTSID="{DA47FFA6-46BD-49F9-9D03-7AFB5986A41E}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.152"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{AFE66DB8-F067-4B2A-910F-09AD7C6D5911}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{04A48490-B5E0-4076-B604-5B66C0E09BE7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[01_BuildTables.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{D94CE6F9-DF9A-48B9-8420-D24A0E7BC5C8}"
+      DTS:DTSID="{06BFEF61-BACF-4E4A-BF83-A2929855FCE4}"
       DTS:ObjectName="01_BuildTables.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script2\01_BuildTables.sql" />
+          DTS:ConnectionString="C:\DDW2\Script2\01_BuildTables.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[02_InsertTables.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{523490C6-641B-43B6-A83A-62A38D39AD81}"
+      DTS:DTSID="{88CDFA54-5D2D-48BB-BAE4-0FEDC136F26A}"
       DTS:ObjectName="02_InsertTables.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script2\02_InsertTables.sql" />
+          DTS:ConnectionString="C:\DDW2\Script2\02_InsertTables.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Con_SQL_File]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{6DCB48E6-716F-4FB7-AA47-059B876BEC40}"
+      DTS:DTSID="{7A51A04F-E283-4037-B5D3-1262F4DADEE2}"
       DTS:ObjectName="Con_SQL_File">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::FolderPath]+"\\"+ @[User::FileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\SP\" />
+          DTS:ConnectionString="C:\DDW2\SP\" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[CreateSchema.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{88C87DBC-495F-46A5-BE8C-92D07934A0BE}"
+      DTS:DTSID="{A6E2455F-CD1B-4E4B-9C17-58984A7253FE}"
       DTS:ObjectName="CreateSchema.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script1\CreateSchema.sql" />
+          DTS:ConnectionString="C:\DDW2\Script1\CreateSchema.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[OLTP_Connection]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{5398867D-582F-4BBB-9E20-6E7B874E9C1B}"
+      DTS:DTSID="{D441DCD5-3072-4E13-8A61-EB83CFB1733F}"
       DTS:ObjectName="OLTP_Connection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SQL1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Demo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{73F6E296-E603-403D-97C7-C5D8AD9905E0}"
+      DTS:DTSID="{F7F73D5E-D2EC-41A5-9A9C-5B34CB161122}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FileName">
@@ -82,12 +82,12 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7C3731F7-6233-4C8C-BD26-303A1130088C}"
+      DTS:DTSID="{BE251381-E402-4A50-91E2-90BC58EA26BF}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FolderPath">
       <DTS:VariableValue
-        DTS:DataType="8">C:\DW2\SP</DTS:VariableValue>
+        DTS:DataType="8">C:\DDW2\SP</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -95,7 +95,7 @@
       DTS:refId="Package\Build Environment"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{FD9FC948-BAF8-42DA-AED3-2071B9280069}"
+      DTS:DTSID="{B0DC754E-55F3-4144-BFD8-4296B5A34984}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Build Environment">
@@ -105,7 +105,7 @@
           DTS:refId="Package\Build Environment\Build Tables"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{85CC222A-78B6-410C-AB83-D8C76B23859F}"
+          DTS:DTSID="{47E80092-E3C8-4AE1-B34C-7A6076B07C0A}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Build Tables"
@@ -114,7 +114,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{5398867D-582F-4BBB-9E20-6E7B874E9C1B}"
+              SQLTask:Connection="{D441DCD5-3072-4E13-8A61-EB83CFB1733F}"
               SQLTask:SqlStmtSourceType="FileConnection"
               SQLTask:SqlStatementSource="01_BuildTables.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
@@ -123,7 +123,7 @@
           DTS:refId="Package\Build Environment\Insert Tables"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{B199861F-BE4F-4AEE-B3A0-AF1AF20A3269}"
+          DTS:DTSID="{CCB0C4A8-8EE0-43A7-8B7E-846DF450A754}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Insert Tables"
@@ -132,7 +132,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{5398867D-582F-4BBB-9E20-6E7B874E9C1B}"
+              SQLTask:Connection="{D441DCD5-3072-4E13-8A61-EB83CFB1733F}"
               SQLTask:SqlStmtSourceType="FileConnection"
               SQLTask:SqlStatementSource="02_InsertTables.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
@@ -142,7 +142,7 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Build Environment.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{03D09CD4-B9F4-4449-8567-701F813C2606}"
+          DTS:DTSID="{ADD63FBE-7BC6-4833-94F3-6DB0974384BB}"
           DTS:From="Package\Build Environment\Build Tables"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -153,7 +153,7 @@
       DTS:refId="Package\Install Schema"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{06D49311-CEB5-4331-863E-4E162397068C}"
+      DTS:DTSID="{CC80E0AA-1D2B-4FA4-82D2-85F3215912F6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Install Schema"
@@ -162,7 +162,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{5398867D-582F-4BBB-9E20-6E7B874E9C1B}"
+          SQLTask:Connection="{D441DCD5-3072-4E13-8A61-EB83CFB1733F}"
           SQLTask:SqlStmtSourceType="FileConnection"
           SQLTask:SqlStatementSource="CreateSchema.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -171,20 +171,20 @@
       DTS:refId="Package\Loop SP Scripts"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{AF49C88E-287C-40EA-8FFF-7A6EC67C051E}"
+      DTS:DTSID="{55BDD02E-7CB5-47C3-A5FA-B1805104C62D}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Loop SP Scripts">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{2F47DA46-3CB6-48C9-878E-90F8B7E0EB09}"
-        DTS:ObjectName="{2F47DA46-3CB6-48C9-878E-90F8B7E0EB09}">
+        DTS:DTSID="{9E3A8EFC-3F10-4459-BA15-733E2AAA715F}"
+        DTS:ObjectName="{9E3A8EFC-3F10-4459-BA15-733E2AAA715F}">
         <DTS:PropertyExpression
           DTS:Name="Directory">@[User::FolderPath]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\DW2\SP" />
+              Folder="C:\DDW2\SP" />
             <FEFEProperty
               FileSpec="*.sql" />
             <FEFEProperty
@@ -200,7 +200,7 @@
           DTS:refId="Package\Loop SP Scripts\Install SPs"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{EB0AB0AE-C961-481E-9C72-A23F42E1E240}"
+          DTS:DTSID="{EE0DFB35-8C45-4B7F-BEC0-D799042A257D}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Install SPs"
@@ -209,7 +209,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{5398867D-582F-4BBB-9E20-6E7B874E9C1B}"
+              SQLTask:Connection="{D441DCD5-3072-4E13-8A61-EB83CFB1733F}"
               SQLTask:SqlStmtSourceType="FileConnection"
               SQLTask:SqlStatementSource="Con_SQL_File" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
@@ -218,8 +218,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{4F8C4FBF-7DBB-40D1-9DD7-97A9D2CBC5F9}"
-          DTS:ObjectName="{4F8C4FBF-7DBB-40D1-9DD7-97A9D2CBC5F9}"
+          DTS:DTSID="{549F98B3-1A2C-4B0B-9D83-26D042440F5E}"
+          DTS:ObjectName="{549F98B3-1A2C-4B0B-9D83-26D042440F5E}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FileName" />
       </DTS:ForEachVariableMappings>
@@ -229,7 +229,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{EB7E4DF9-BCA6-4357-B7D9-018A8BC27B6A}"
+      DTS:DTSID="{A688C6A9-35EA-42C3-8C29-00543E010D79}"
       DTS:From="Package\Install Schema"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -237,7 +237,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{EC566216-5A71-4230-8E3C-947CE4E7E9C0}"
+      DTS:DTSID="{51743530-34BA-41FB-8102-C3A1DBC5AEC9}"
       DTS:From="Package\Loop SP Scripts"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -335,14 +335,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.0350916601396"
+              EndConnector="0,46.0350916601397"
               Start="0,0"
-              End="0,38.5350916601396">
+              End="0,38.5350916601397">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5350916601396" />
+                    End="0,38.5350916601397" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

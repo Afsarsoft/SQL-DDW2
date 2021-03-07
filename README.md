@@ -5,7 +5,7 @@ A Sample OLTP and OLAP/Data Warehouse DBs to demo how to build and load a Data W
 # Recommended Prerequisites
 -https://github.com/Afsarsoft/SQL101 <br />
 -https://github.com/Afsarsoft/SQL-AnimalShelter <br />
--https://github.com/Afsarsoft/SQL-DWD <br />
+-https://github.com/Afsarsoft/SQL-DDW1 <br />
 
 # Manual Installation 
 For OLTP DB <br />
@@ -14,13 +14,13 @@ For OLTP DB <br />
 3- From "Script2" folder, run all scripts starting with 01_% to 02_% <br /> <br />
 
 For OLAP/Data Warehouse <br />
-1- In a new or existing SQL DB or Azure SQL DB, from "Script1DW" folder, install script CreateSchemaDW.sql <br />
+1- In a new or existing SQL DB or Azure SQL DB, from "Script1DW" folder, install script CreateSchema.sql <br />
 2- From "SPDW" folder install all SPs (ignore any warnings) <br />
 3- From "Script2DW" folder, run all scripts starting with 01_% and 02_% <br /> <br />
 
 # Automated Installation 
-1- Create a folder "C:\DW2" <br />
-2- Copy folders "Script1", "Script2", "Script1DW", "Script2DW", "SP", AND "SPDW" to folder "C:\DW2" <br /> <br />
+1- Create a folder "C:\DDW2" <br />
+2- Copy folders "Script1", "Script2", "Script1DW", "Script2DW", "SP", AND "SPDW" to folder "C:\DDW2" <br /> <br />
 
 For OLTP DB <br />
 3- Change connection "OLTP_Connection" according to your environment and Run SSIS package BuildOLTP2 to install all SQL objects <br />

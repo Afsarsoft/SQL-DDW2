@@ -13,7 +13,7 @@ FROM ddw2DW.FactSales;
 GO
 
 SELECT *
-FROM ddw2DW.FactSalesBadData;
+FROM ddw2DW.OrderBadData;
 GO
 
 SELECT count(1)

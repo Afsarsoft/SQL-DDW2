@@ -5,74 +5,74 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SCYRUSH1"
   DTS:CreatorName="REDMOND\scyrus"
-  DTS:DTSID="{F4E8010D-B641-420C-9F70-FBE18ED3A14E}"
+  DTS:DTSID="{8D7E98D3-6E5E-47B9-8CB0-334E6BDFBF4A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.152"
   DTS:LocaleID="1033"
   DTS:ObjectName="BuildDW"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{89D47FDD-E941-4D1B-848B-73B9F54C3BE5}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{85A47A4A-DE30-4276-B7E0-1BB1FC170B27}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[01_BuildTablesDW.sql]"
+      DTS:refId="Package.ConnectionManagers[01_BuildTables.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{85FDCDBC-25A4-424E-95BD-6353F01B5C6D}"
-      DTS:ObjectName="01_BuildTablesDW.sql">
+      DTS:DTSID="{8C9E2699-BE8C-4280-843E-9E7E199AA38E}"
+      DTS:ObjectName="01_BuildTables.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script2DW\01_BuildTablesDW.sql" />
+          DTS:ConnectionString="C:\DDW2\Script2DW\01_BuildTables.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[02_BuildFKsDW.sql]"
+      DTS:refId="Package.ConnectionManagers[02_BuildFKs.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{0B01807D-19B2-43F4-BA12-322FAFC7DA14}"
-      DTS:ObjectName="02_BuildFKsDW.sql">
+      DTS:DTSID="{50AEF997-BD4F-4459-A13D-658A26FA8223}"
+      DTS:ObjectName="02_BuildFKs.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script2DW\02_BuildFKsDW.sql" />
+          DTS:ConnectionString="C:\DDW2\Script2DW\02_BuildFKs.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Con_SQL_File]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{C105664A-4D0F-4C3B-9B41-46A0C59ED7DA}"
+      DTS:DTSID="{44C8EAF2-FD40-4092-AD9C-7C3545D8E76D}"
       DTS:ObjectName="Con_SQL_File">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::FolderPath]+"\\"+ @[User::FileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\SPDW\" />
+          DTS:ConnectionString="C:\DDW2\SPDW\" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CreateSchemaDW.sql]"
+      DTS:refId="Package.ConnectionManagers[CreateSchema.sql]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{118747BD-16FE-43B5-9920-926AE2378B0C}"
-      DTS:ObjectName="CreateSchemaDW.sql">
+      DTS:DTSID="{04BD2BFA-149F-46C4-9144-DB0A11115D18}"
+      DTS:ObjectName="CreateSchema.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\DW2\Script1DW\CreateSchemaDW.sql" />
+          DTS:ConnectionString="C:\DDW2\Script1DW\CreateSchema.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DW_Connection]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{3D050AF6-888D-4D55-B9E1-DEAC33AFE19D}"
+      DTS:DTSID="{4B9BF70C-4D52-424B-8E28-3F0EE1466883}"
       DTS:ObjectName="DW_Connection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SQL1DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DemoDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5C2F2628-DEDC-451E-8BBE-6487CBFDF27A}"
+      DTS:DTSID="{443DE333-93F1-4C4F-9F36-FDDF6CD4C538}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FileName">
@@ -82,12 +82,12 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{03CA313F-1A82-430A-8EB5-BE9D7B07E406}"
+      DTS:DTSID="{7E633740-1594-4FB7-91C1-1AA8AED55C30}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FolderPath">
       <DTS:VariableValue
-        DTS:DataType="8">C:\DW2\SPDW</DTS:VariableValue>
+        DTS:DataType="8">C:\DDW2\SPDW</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -95,7 +95,7 @@
       DTS:refId="Package\Build Environment"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{7FB096F8-70E7-4351-8159-50C507FB2002}"
+      DTS:DTSID="{77D4D241-60C5-4C3D-8DAA-011B293D9220}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Build Environment">
@@ -105,7 +105,7 @@
           DTS:refId="Package\Build Environment\Build FKs"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{123A766A-6DC2-46DD-812F-FB5F68722908}"
+          DTS:DTSID="{66A3D01D-34D7-4332-8003-2D30928C86EA}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Build FKs"
@@ -114,16 +114,16 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{3D050AF6-888D-4D55-B9E1-DEAC33AFE19D}"
+              SQLTask:Connection="{4B9BF70C-4D52-424B-8E28-3F0EE1466883}"
               SQLTask:SqlStmtSourceType="FileConnection"
-              SQLTask:SqlStatementSource="02_BuildFKsDW.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="02_BuildFKs.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Build Environment\Build Tables"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{6C1FD11B-FDA7-4ED2-8AFB-FC130ADAADEA}"
+          DTS:DTSID="{7396380F-531B-4DC1-89FE-95E4F876C182}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Build Tables"
@@ -132,9 +132,9 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{3D050AF6-888D-4D55-B9E1-DEAC33AFE19D}"
+              SQLTask:Connection="{4B9BF70C-4D52-424B-8E28-3F0EE1466883}"
               SQLTask:SqlStmtSourceType="FileConnection"
-              SQLTask:SqlStatementSource="01_BuildTablesDW.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="01_BuildTables.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -142,7 +142,7 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Build Environment.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{54CAF3AA-8A77-46F0-A187-106A5D5D28A3}"
+          DTS:DTSID="{8E2989B1-1091-4806-B0CD-EC231DAB6E61}"
           DTS:From="Package\Build Environment\Build Tables"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -153,7 +153,7 @@
       DTS:refId="Package\Install Schema"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{62DCCE9B-E3DC-46E2-9C5A-C658DCAAEE74}"
+      DTS:DTSID="{D14746F8-92E6-433D-9D2E-01B45E271EA5}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Install Schema"
@@ -162,29 +162,29 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3D050AF6-888D-4D55-B9E1-DEAC33AFE19D}"
+          SQLTask:Connection="{4B9BF70C-4D52-424B-8E28-3F0EE1466883}"
           SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="CreateSchemaDW.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="CreateSchema.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Loop SP Scripts"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{DD4E99AC-33D1-4CDA-AA82-5DE60D473E26}"
+      DTS:DTSID="{EE641F0B-5F31-42DE-AE33-D3ED2B84F93D}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Loop SP Scripts">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{49E6A08A-BB8A-4844-8EE8-A8BCDFA72C58}"
-        DTS:ObjectName="{49E6A08A-BB8A-4844-8EE8-A8BCDFA72C58}">
+        DTS:DTSID="{50461106-E317-4CBB-BDAB-788274450E58}"
+        DTS:ObjectName="{50461106-E317-4CBB-BDAB-788274450E58}">
         <DTS:PropertyExpression
           DTS:Name="Directory">@[User::FolderPath]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\DW2\SPDW" />
+              Folder="C:\DDW2\SPDW" />
             <FEFEProperty
               FileSpec="*.sql" />
             <FEFEProperty
@@ -200,7 +200,7 @@
           DTS:refId="Package\Loop SP Scripts\Install SPs"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{A045FF60-181E-4039-BC61-9D307D693D41}"
+          DTS:DTSID="{D59DAFE5-4693-4898-810F-E1E0CD60D441}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Install SPs"
@@ -209,7 +209,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{3D050AF6-888D-4D55-B9E1-DEAC33AFE19D}"
+              SQLTask:Connection="{4B9BF70C-4D52-424B-8E28-3F0EE1466883}"
               SQLTask:SqlStmtSourceType="FileConnection"
               SQLTask:SqlStatementSource="Con_SQL_File" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
@@ -218,8 +218,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{614C2B79-E918-44CD-A536-1C531C45E251}"
-          DTS:ObjectName="{614C2B79-E918-44CD-A536-1C531C45E251}"
+          DTS:DTSID="{C0ADEC73-9539-4596-BDC5-171A27AB8B4B}"
+          DTS:ObjectName="{C0ADEC73-9539-4596-BDC5-171A27AB8B4B}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FileName" />
       </DTS:ForEachVariableMappings>
@@ -229,7 +229,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{BD587097-14A5-418E-AD4C-046297DBD4F4}"
+      DTS:DTSID="{1675ED99-F393-46D9-8446-26750F34F3D1}"
       DTS:From="Package\Install Schema"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -237,7 +237,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{0418D88D-4897-4B88-8D1B-4C7CB43A5E67}"
+      DTS:DTSID="{D40E4F38-BA3A-48A7-9E32-214345561F25}"
       DTS:From="Package\Loop SP Scripts"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
