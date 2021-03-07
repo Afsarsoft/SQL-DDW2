@@ -29,7 +29,7 @@ SET @ErrorText = 'Unexpected ERROR in setting the variables!';
 SET @SP = OBJECT_NAME(@@PROCID)
 SET @StartTime = GETDATE();    
 SET @Message = 'Started SP ' + @SP + ' at ' + FORMAT(@StartTime , 'MM/dd/yyyy HH:mm:ss');  
-
+RAISERROR (@Message, 0,1) WITH NOWAIT;
 
 -------------------------------------------------------------------------------
 SET @ErrorText = 'Failed CREATE Table ddw2DW.DimTime.';
